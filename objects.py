@@ -82,10 +82,10 @@ class CPU:
             if not solved:
                 return False
             
-        return self.slack_reclamaining(D)
+        return self.slack_reclaiming(D)
     
 
-    def slack_reclamaining(self, D: int) -> bool:
+    def slack_reclaiming(self, D: int) -> bool:
         current_time = 0
         local_total_energy = 0
 
