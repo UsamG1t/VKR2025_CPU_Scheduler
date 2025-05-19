@@ -122,7 +122,7 @@ def testing():
 
 testing()
 
-def base_data():
+def base_energy():
     for count, static_p_percent in product(CPU_count, static_P_percent):
         with open(f"VKR_results/BaseData_{count}_{static_p_percent[1]}.csv", "w+") as csv:
         
@@ -139,4 +139,4 @@ def base_data():
                     
                 print(",".join(map(str, [task_count, dl / count, base_energy])), end="\n", file=csv)
 
-base_data()
+base_energy()

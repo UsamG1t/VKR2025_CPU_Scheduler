@@ -52,7 +52,7 @@ for count, speed, static_p_percent in product(CPU_count, CPU_min_speed, static_P
 
     # Создание фигуры с 4 субплoтами
     fig, axes = plt.subplots(2, 2, figsize=(8, 6))
-    # fig.suptitle(f'Снижение энергопотребления алгоритмов относительно выполнения без механизмов энергосбережения:\n{count} процессоров, частота {speed}-100, Стат.мощность {percent}%', fontsize=16)
+    fig.suptitle(f'Снижение энергопотребления алгоритмов относительно выполнения без механизмов энергосбережения:\n{count} процессоров, частота {speed}-100, Стат.мощность {percent}%', fontsize=16)
 
     # Алгоритмы и их названия для отображения
     algorithms = ['NoMigNoDPM', 'MigNoDPM', 'NoMigDPM', 'MigDPM']
@@ -80,6 +80,6 @@ for count, speed, static_p_percent in product(CPU_count, CPU_min_speed, static_P
         ax.invert_yaxis()
         
     plt.tight_layout()
-    plt.savefig(f"../VKR/appendix_pics/Experiment_{count}_{speed}_{percent}.png", dpi=300, bbox_inches='tight')
-    # plt.savefig(f"VKR_Graphics/Experiment_{count}_{speed}_{percent}.png", dpi=300, bbox_inches='tight')
+    #plt.savefig(f"../VKR/appendix_pics/Experiment_{count}_{speed}_{percent}.png", dpi=300, bbox_inches='tight')
+    plt.savefig(f"VKR_Graphics/Experiment_{count}_{speed}_{percent}.png", dpi=300, bbox_inches='tight')
     plt.close()
